@@ -7,11 +7,11 @@
     </head>
     <body>
         <div id="app">
-            <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} -
-                <span v-on:mousemove.stop="">Dead spot</span>
+            <p @mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} -
+                <span @mousemove.stop="">Dead spot</span>
             </p>
 
-            <input type="text" v-on:keyup.enter="alertMe">
+            <input type="text" @keyup.enter="alertMe">
         </div>
 
 
