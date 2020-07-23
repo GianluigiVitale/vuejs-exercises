@@ -2,14 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Vue</title>
+        <title>VueJS</title>
         <script src="../vue.js" charset="utf-8"></script>
     </head>
     <body>
         <div id="app">
-            <h1>{{ message }}</h1>
-            <input type="text" v-model="message">
+            <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }} -
+                <span v-on:mousemove.stop="">Dead spot</span>
+            </p>
+
+            <input type="text" v-on:keyup.enter="alertMe">
         </div>
+
 
         <script src="script.js" charset="utf-8"></script>
     </body>
